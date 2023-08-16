@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>踩方块！</title>
+  <style>
+    div {
+  /*不可被选中*/
+  -webkit-user-select: none;
+}
+    #score{
+      /*画面的右上角，40px大小的蓝色字体*/
+      position: fixed;
+      top: 10%;
+      right: 20%;
+      color: blue;
+      font-size: 40px;
+
+  }
+    button{
+    /*位于窗口正中间，蓝色字，黄色背景*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+    background-color: yellow;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    }
+    #time {
+      /*绝对位置在窗口中间偏上方，红色大号粗体字*/
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: red;
+      font-weight: bold;
+      font-size: 100px;
+      pointer-events: none;
+    }
+    #game-board {
+      position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+    }
+    .game-row {
+      display: flex;
+      width: 600px;
+      height: 150px;
+      border: 1px solid #000;
+    }
+    .game-tile {
+      flex: 1;
+      background-color: #fff;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+    .game-tile.black {
+      background-color: #000;
+    }
+    .game-tile.gray {
+      background-color: gray;
+    }
+    .game-tile.red {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+    
+  <div id="game-board"></div>
+    <div id="time">踩方块</div>
+    <div id="score">分数：0</div>
+    
+    <button id="startgame">开始游戏</div>
+  <script src="game.js"></script>
+</body>
+</html>
